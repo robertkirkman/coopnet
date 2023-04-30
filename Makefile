@@ -40,7 +40,11 @@ else ifeq ($(OSX_BUILD),1)
   LIBS := -l juice
   LDFLAGS += -rpath . -dynamiclib -install_name @rpath/$(DYNLIB_NAME)
 else
-  LIB_DIR := lib/linux
+  LIB_DIR := lib/libjuice
+  DUMMY != $(MAKE) -C $(LIB_DIR) >&2 || echo FAIL
+  ifeq ($(DUMMY),FAIL)
+    $(error Failed to build libjuice)
+  endif
 endif
 
 .PHONY: all client server lib dynlib clean
@@ -72,3 +76,4 @@ $(BIN_DIR):
 
 clean:
 	rm -rf $(BIN_DIR)
+	$(MAKE) -s -C $(LIB_DIR) dist-clean
