@@ -8,7 +8,7 @@ LOGGING ?= 0
 #################
 
 CXX = g++
-CXXFLAGS = -Wall -Werror -Wno-unused-function -Wno-nonnull-compare -std=c++11 -fPIC -DJUICE_STATIC -g
+CXXFLAGS = -Wall -Wno-unused-function -std=c++11 -fPIC -DJUICE_STATIC -g
 INCLUDES = -Icommon -Ilib/include
 LDFLAGS = -pthread
 
