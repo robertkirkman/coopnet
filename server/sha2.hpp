@@ -38,6 +38,7 @@
 #ifndef SHA2_H
 #define SHA2_H
 #include <string>
+#include <cstdint>
  
 class SHA2
 {

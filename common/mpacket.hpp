@@ -2,6 +2,7 @@
 
 #include <cstdint>
 #include <vector>
+#include <string>
 
 #define MPACKET_PROTOCOL_VERSION 4
 #define MPACKET_MAX_SIZE ((size_t)5100)
