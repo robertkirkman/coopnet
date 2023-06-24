@@ -192,11 +192,11 @@ uint64_t SocketGetInfoBits(int aSocket) {
             if (!strcmp(ip, "127.0.0.1")) { continue; }
             if (!strcmp(ip, "0.0.0.0")) { continue; }
 
-            unsigned char* hw = (unsigned char*)ifr.ifr_hwaddr.sa_data;
-            uint64_t value = 0;
-            for (int i = 0; i < 6; i++) {
-                value ^= ((uint64_t)hw[i]) << (8 * i);
-            }
+            // unsigned char* hw = (unsigned char*)ifr.ifr_hwaddr.sa_data;
+            // uint64_t value = 0;
+            // for (int i = 0; i < 6; i++) {
+            //     value ^= ((uint64_t)hw[i]) << (8 * i);
+            // }
             info += info;
         }
 
