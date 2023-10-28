@@ -123,7 +123,7 @@ uint64_t SocketGetInfoBits(int aSocket) {
 
 #include <sys/ioctl.h>
 #include <net/if.h>
-#ifdef __ANDROID__
+#ifdef TARGET_ANDROID
 // Only necessary for Android 5 and 6
 // https://stackoverflow.com/questions/26476346/ifaddrs-h-header-not-found-when-compiling-sdl-for-android
 #include "android/ifaddrs-android.h"

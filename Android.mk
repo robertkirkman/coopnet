@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
-LOCAL_CFLAGS := -DJUICE_STATIC
+LOCAL_CFLAGS := -DJUICE_STATIC -DTARGET_ANDROID
 LOCAL_MODULE := coopnet
 COOPNET_SRC_FILES := common/client.cpp \
 					common/connection.cpp \
